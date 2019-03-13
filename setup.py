@@ -3,12 +3,12 @@ from glob import glob
 from setuptools import setup
 from itertools import chain
 
-pkgname = 'jupyterthemes'
+pkgname = 'planetjupyter'
 major = 0
 minor = 20
 patch = 0
 version = '.'.join([str(v) for v in [major, minor, patch]])
-url = 'https://github.com/dunovank/jupyter-themes'
+url = 'https://github.com/toddbirchard/jupyter-themes'
 download_url = '/'.join([url, 'tarball', 'v' + version])
 
 
@@ -51,9 +51,9 @@ datafiles[pkgname].extend(list(fontsdata))
 install_requires = ['jupyter_core', 'notebook>=5.6.0', 'ipython>=5.4.1', 'matplotlib>=1.4.3', 'lesscpy>=0.11.2']
 
 setup(
-    name='jupyterthemes',
+    name='planetjupyter',
     version=version,
-    packages=['jupyterthemes'],
+    packages=['planetjupyter'],
     include_package_data=True,
     package_data=datafiles,
     description='Select and install a Jupyter notebook theme',
@@ -61,8 +61,8 @@ setup(
     license='MIT',
     url=url,
     download_url=download_url,
-    author='dunovank',
-    author_email='dunovank@gmail.com',
+    author='toddbirchard',
+    author_email='toddbirchard@gmail.com',
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -79,7 +79,7 @@ setup(
     keywords=['jupyter', 'python', 'ipython', 'notebook', 'theme', 'less', 'css'],
     entry_points={
         'console_scripts': [
-            'jupyter-theme = jupyterthemes:main',
-            'jt = jupyterthemes:main',
+            'jupyter-theme = planetjupyter:main',
+            'jt = planetjupyter:main',
         ],
     })

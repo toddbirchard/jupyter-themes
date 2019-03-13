@@ -233,8 +233,7 @@ span#login_widget > .button.active, #logout.active,
     border-radius: 2px;
 }
 body > #header #header-container {
-    padding-bottom: 0px;
-    padding-top: 4px;
+    padding: @banner-padding;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -576,6 +575,10 @@ p.navbar-text.indicator_area {
     margin: 0;
 }
 
+#save_widget #notebook_name {
+    margin-right:20px;
+}
+
 
 /****************************************/
 /********* ICONS and INDICATORS *********/
@@ -674,16 +677,7 @@ div.notification_widget.info,
     -webkit-font-smoothing: antialiased;
 }
 #notification_trusted {
-    font-family: @notebook-fontfamily;
-    // font-size: 17px !important;
-    border: none;
-    background: transparent;
-    background-color: transparent;
-    margin-bottom: 0px !important;
-    // margin-top: 12px !important;
-    vertical-align: bottom !important;
-    color: @disabled !important;
-    cursor: default !important;
+    display:none;
 }
 #notification_area, div.notification_area {
     float: right !important;
@@ -1473,6 +1467,9 @@ HTML, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form
     font-weight: 400;
 }
 
+h1, h2, h3 {
+    font-family: @header-fontfamily;
+}
 
 //
 // .navbar-default .navbar-nav > li > a {
